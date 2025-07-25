@@ -21,7 +21,7 @@ import androidx.room.PrimaryKey
         )]
 )
 data class SetEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val exerciseId: Int,
     val routineId: Int,
     val weight: Float,

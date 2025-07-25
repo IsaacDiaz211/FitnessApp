@@ -53,7 +53,7 @@ fun FluentStyledApp() {
                 .padding(innerPadding)
                 .background(
                     brush = Brush.verticalGradient(
-                        colors = listOf(PurpleBlack, RedToChange, Lavanda, Violet)
+                        colors = listOf(PurpleBlack, DarkRed, Violet)
                     )
                 )
         ) {

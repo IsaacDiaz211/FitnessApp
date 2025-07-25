@@ -11,6 +11,5 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 val PurpleBlack = Color(0xff301616)
-val RedToChange = Color(0xFFC41D36)
-val Lavanda = Color(0xFF780CAD)
+val DarkRed = Color(0xff780720)
 val Violet = Color(0xFF50315E)

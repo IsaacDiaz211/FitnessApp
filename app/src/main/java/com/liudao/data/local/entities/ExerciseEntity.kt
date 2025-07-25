@@ -14,7 +14,7 @@ import androidx.room.ForeignKey
     )]
 )
 data class ExerciseEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val name: String,
-    val idMuscleGroup: Int
+    val idMuscleGroup: Long
 )

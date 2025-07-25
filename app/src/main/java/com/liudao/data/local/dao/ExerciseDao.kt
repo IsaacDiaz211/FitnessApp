@@ -1,6 +1,7 @@
 package com.example.liudao.data.local.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.liudao.data.local.entities.*
@@ -8,9 +9,15 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ExerciseDao {
+    @Query("SELECT * FROM exercises")
+    fun getExercises(): Flow<List<ExerciseEntity>>
+
     @Query("SELECT * FROM exercises WHERE idMuscleGroup = :group")
-    fun getExercisesForGroup(group: Int): Flow<List<ExerciseEntity>>
+    fun getForGroup(group: Int): Flow<List<ExerciseEntity>>
 
     @Insert
-    suspend fun insertExercise(exercise: ExerciseEntity): Long
+    suspend fun insert(exercise: ExerciseEntity): Long
+
+    @Delete
+    suspend fun delete(exercise: ExerciseEntity)
 }

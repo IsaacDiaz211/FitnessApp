@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.liudao"
+    namespace = "com.liudao"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.liudao"
+        applicationId = "com.liudao"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
