@@ -7,10 +7,10 @@ import com.example.liudao.data.local.entities.*
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface ExerciseDao {
-    @Query("SELECT * FROM exercises WHERE idMuscleGroup = :group")
-    fun getExercisesForGroup(group: Int): Flow<List<ExerciseEntity>>
+interface MuscleGroupDao {
+    @Query("SELECT * FROM muscle_groups")
+    fun getMuscleGroup(): Flow<List<MuscleGroupEntity>>
 
     @Insert
-    suspend fun insertExercise(exercise: ExerciseEntity): Long
+    suspend fun insertMuscleGroup(muscleGroup: MuscleGroupEntity): Long
 }

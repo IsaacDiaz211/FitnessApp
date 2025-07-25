@@ -1,7 +1,7 @@
 package com.example.liudao.screens
 
 import androidx.compose.runtime.mutableStateListOf
-import com.example.liudao.data.local.entities.Exercise
+import com.example.liudao.domain.models.Exercise
 import androidx.lifecycle.ViewModel
 
 class HomeViewModel : ViewModel() {
@@ -9,6 +9,6 @@ class HomeViewModel : ViewModel() {
     val exercises: List<Exercise> = _exercises
 
     fun addExercise(name: String) {
-        _exercises.add(Exercise(name = name))
+        // Agregar un nuevo ejercicio a la lista_exercises.add(Exercise(name = name))
     }
 }

@@ -20,6 +20,7 @@ import com.example.liudao.ui.theme.LiudaoTheme
 import com.example.liudao.components.BottomNavBar
 import androidx.compose.material3.*
 import androidx.navigation.compose.rememberNavController
+import com.example.liudao.ui.theme.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,20 +33,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
 fun FluentStyledAppPreview() {
-    LiudaoTheme {
-        FluentStyledApp()
-    }
+    FluentStyledApp()
 }
 
 @Composable
@@ -62,7 +53,7 @@ fun FluentStyledApp() {
                 .padding(innerPadding)
                 .background(
                     brush = Brush.verticalGradient(
-                        colors = listOf(Color(0xff301616), Color(0xFFC41D36), Color(0xFF780CAD), Color(0xFF50315E))
+                        colors = listOf(PurpleBlack, RedToChange, Lavanda, Violet)
                     )
                 )
         ) {
