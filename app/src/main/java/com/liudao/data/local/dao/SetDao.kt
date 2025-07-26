@@ -15,6 +15,9 @@ interface SetDao {
     @Insert
     suspend fun insert(set: SetEntity): Long
 
+    @Insert
+    suspend fun insertAll(list: List<SetEntity>)
+
     @Query("SELECT * FROM sets WHERE routineId = :routine ORDER BY `order` DESC")
     fun getSetsByRoutine(routine: Int): Flow<List<SetEntity>>
 

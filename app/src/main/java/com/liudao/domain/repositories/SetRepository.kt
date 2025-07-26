@@ -20,6 +20,9 @@ class SetRepository @Inject constructor(
     override suspend fun insert(set: Set): Long =
         dao.insert(set.toEntity())
 
+    override suspend fun insertAll(list: List<Set>) =
+        dao.insertAll(list.map { it.toEntity() })
+
     override suspend fun delete(set: Set) =
         dao.delete(set.toEntity())
 }
