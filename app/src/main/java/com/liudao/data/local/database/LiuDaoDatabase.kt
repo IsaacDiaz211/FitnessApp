@@ -22,5 +22,4 @@ abstract class LiuDaoDatabase: RoomDatabase() {
     abstract fun muscleGroupDao(): MuscleGroupDao
     abstract fun exerciseDao(): ExerciseDao
     abstract fun setDao(): SetDao
-
 }

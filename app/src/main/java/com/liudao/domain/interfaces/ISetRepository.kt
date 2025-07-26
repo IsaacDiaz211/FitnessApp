@@ -5,6 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface ISetRepository {
     fun getAll(): Flow<List<Set>>
+    fun getByRoutine(routine: Int): Flow<List<Set>>
     suspend fun insert(set: Set): Long
-    suspend fun delete(id: Long)
+    suspend fun delete(set: Set)
 }

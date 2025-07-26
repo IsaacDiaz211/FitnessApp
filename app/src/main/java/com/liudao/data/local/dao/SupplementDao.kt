@@ -1,6 +1,7 @@
 package com.example.liudao.data.local.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.liudao.data.local.entities.*
@@ -12,5 +13,8 @@ interface SupplementDao {
     fun getSupplements(): Flow<List<SupplementEntity>>
 
     @Insert
-    suspend fun insertSupplement(supplement: SupplementEntity): Long
+    suspend fun insert(supplement: SupplementEntity): Long
+
+    @Delete
+    suspend fun delete(supplement: SupplementEntity)
 }

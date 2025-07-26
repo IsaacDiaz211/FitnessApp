@@ -1,6 +1,7 @@
 package com.example.liudao.data.local.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.liudao.data.local.entities.*
@@ -9,8 +10,11 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface MuscleGroupDao {
     @Query("SELECT * FROM muscle_groups")
-    fun getMuscleGroup(): Flow<List<MuscleGroupEntity>>
+    fun getMuscleGroups(): Flow<List<MuscleGroupEntity>>
 
     @Insert
-    suspend fun insertMuscleGroup(muscleGroup: MuscleGroupEntity): Long
+    suspend fun insert(muscleGroup: MuscleGroupEntity): Long
+
+    @Delete
+    suspend fun delete(muscleGroup: MuscleGroupEntity)
 }

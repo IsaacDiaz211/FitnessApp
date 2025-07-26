@@ -24,17 +24,17 @@ object RoomModule {
         ).build()
 
     @Provides
-    fun provideEjercicioDao(db: LiuDaoDatabase) = db.exerciseDao()
+    fun provideExerciseDao(db: LiuDaoDatabase) = db.exerciseDao()
 
     @Provides
-    fun provideGrupoMuscularDao(db: LiuDaoDatabase) = db.muscleGroupDao()
+    fun provideMuscleGroupDao(db: LiuDaoDatabase) = db.muscleGroupDao()
 
     @Provides
-    fun provideRutinaDao(db: LiuDaoDatabase) = db.routineDao()
+    fun provideRutineDao(db: LiuDaoDatabase) = db.routineDao()
 
     @Provides
-    fun provideSerieDao(db: LiuDaoDatabase) = db.setDao()
+    fun provideSetDao(db: LiuDaoDatabase) = db.setDao()
 
     @Provides
-    fun provideSuplementoDao(db: LiuDaoDatabase) = db.supplementDao()
+    fun provideSuplementDao(db: LiuDaoDatabase) = db.supplementDao()
 }

@@ -1,6 +1,7 @@
 package com.example.liudao.data.local.dao
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.example.liudao.data.local.entities.*
@@ -12,5 +13,8 @@ interface RoutineDao {
     fun getRoutines(): Flow<List<RoutineEntity>>
 
     @Insert
-    suspend fun insertRoutine(routine: RoutineEntity): Long
+    suspend fun insert(routine: RoutineEntity): Long
+
+    @Delete
+    suspend fun delete(routine: RoutineEntity)
 }

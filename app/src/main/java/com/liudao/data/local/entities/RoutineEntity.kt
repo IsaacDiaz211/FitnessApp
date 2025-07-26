@@ -7,6 +7,5 @@ import java.time.LocalDate
 @Entity(tableName = "routines")
 data class RoutineEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
-    val name: String,
     val date: LocalDate = LocalDate.now()
 )
