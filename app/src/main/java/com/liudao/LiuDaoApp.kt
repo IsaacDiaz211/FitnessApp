@@ -1,7 +1,0 @@
-package com.example.liudao
-
-import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
-
-@HiltAndroidApp
-class LiuDaoApp : Application()
